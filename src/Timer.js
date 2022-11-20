@@ -8,6 +8,14 @@ class Timer extends Component {
 
   // add your code here
 
+  componentDidMount() {
+    this.interval=setInterval(this.clockTick, 1000);
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval)
+  }
+
   render() {
     const { time, color } = this.state;
     return (
@@ -38,3 +46,4 @@ class Timer extends Component {
 }
 
 export default Timer;
+ß
